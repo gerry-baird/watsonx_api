@@ -38,7 +38,9 @@ async def init():
     #     llm_cache_entry = LLM_Cache_Entry(request=llm_request, response=llm_response, timestamp=now.isoformat())
     #     llm_cache.append(llm_cache_entry)
 
-
+@router.get(""/hello"")
+def hello():
+    return {"message": "Hello World"}
 
 @router.get("/v1/cache")
 async def get_cache() -> LLM_Cache_List:
