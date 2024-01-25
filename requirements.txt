@@ -1,0 +1,7 @@
+fastapi
+uvicorn[standard]
+pydantic==2.3.0
+python-dotenv==1.0.0
+ibm-watson-machine-learning
+deep-compare
+httpx
