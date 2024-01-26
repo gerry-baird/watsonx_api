@@ -118,6 +118,8 @@ async def do_callback(llm_request: LLM_Request, callbackurl: HttpUrl)-> Async_Re
 
     str_response = json.dumps(response)
 
+    print("do_callback() - returning : " + str_response)
+
     httpx.post(str(callbackurl),
                data=str_response,
                headers={"Content-Type": "application/json"},
